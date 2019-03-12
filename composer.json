@@ -21,6 +21,14 @@
 	"repositories" : [{
 			"type" : "composer",
 			"url" : "http://wpackagist.org"
+		},
+		{
+			"type" : "package",
+			"package" : {
+				"name" : "wpackagist-plugin/advanced-custom-fields",
+				"version" : "4.4.11",
+				"type" : "wordpress-plugin"
+			}
 		}
 	],
 	"require" : {
