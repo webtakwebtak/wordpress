@@ -46,7 +46,7 @@
 		"wordpress-install-dir" : "web/wp"
 	},
 	"scripts" : {
-		"post-root-package-install" : "Webtak\\CleanupWP\\Test::onPostInstallCmd"
+		"post-dependencies-solving" : "Webtak\\CleanupWP\\Test::onPostInstallCmd"
 	},
 	"minimum-stability" : "dev"
 }
