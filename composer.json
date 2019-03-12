@@ -3,7 +3,7 @@
 	"type" : "project",
 	"license" : "MIT",
 	"description" : "WordPress boilerplate ",
-	"homepage" : "https://roots.io/bedrock/",
+	"homepage" : "https://webtak.nl",
 	"authors" : [{
 			"name" : "Hans Kellerhuis",
 			"email" : "webtak@gmail.com",
@@ -11,11 +11,9 @@
 		}
 	],
 	"keywords" : [
-		"bedrock",
 		"composer",
 		"webtakwebtak",
 		"wordpress",
-		"wp"
 	],
 	"config" : {
 		"secure-http" : false
@@ -27,7 +25,7 @@
 	],
 	"require" : {
 		"php" : ">=7.3",
-		"vlucas/phpdotenv": "^3.0.0",
+		"vlucas/phpdotenv" : "^3.0.0",
 		"johnpbloch/wordpress" : "5.1.0",
 		"wpackagist-plugin/advanced-custom-fields" : "*"
 	},
