@@ -13,7 +13,7 @@
 	"keywords" : [
 		"composer",
 		"webtakwebtak",
-		"wordpress",
+		"wordpress"
 	],
 	"config" : {
 		"secure-http" : false
