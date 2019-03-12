@@ -1,19 +1,22 @@
 {
-  "name": "webtakwebtak/wordpress",
-  "type": "project",
-  "license": "MIT",
-  "description": "WordPress boilerplate ",
-  "homepage": "https://roots.io/bedrock/",
-  "authors": [
-    {
-      "name": "Hans Kellerhuis",
-      "email": "webtak@gmail.com",
-      "homepage": "https://github.com/webtakwebtak"
-    }
-  ],
-  "keywords": [
-    "bedrock", "composer", "webtakwebtak", "wordpress", "wp"
-  ],
+	"name" : "webtakwebtak/wordpress",
+	"type" : "project",
+	"license" : "MIT",
+	"description" : "WordPress boilerplate ",
+	"homepage" : "https://roots.io/bedrock/",
+	"authors" : [{
+			"name" : "Hans Kellerhuis",
+			"email" : "webtak@gmail.com",
+			"homepage" : "https://github.com/webtakwebtak"
+		}
+	],
+	"keywords" : [
+		"bedrock",
+		"composer",
+		"webtakwebtak",
+		"wordpress",
+		"wp"
+	],
 	"config" : {
 		"secure-http" : false
 	},
@@ -24,7 +27,8 @@
 	],
 	"require" : {
 		"php" : ">=7.3",
-		"johnpbloch/wordpress": "5.1.0",
+		"vlucas/phpdotenv": "^3.0.0",
+		"johnpbloch/wordpress" : "5.1.0",
 		"wpackagist-plugin/advanced-custom-fields" : "*"
 	},
 	"extra" : {
@@ -41,5 +45,4 @@
 		},
 		"wordpress-install-dir" : "web/wp"
 	}
-	
 }
