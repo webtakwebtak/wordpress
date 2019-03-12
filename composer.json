@@ -12,8 +12,8 @@
 	],
 	"keywords" : [
 		"composer",
-		"webtakwebtak",
-		"wordpress"
+		"wordpress",
+		"webtak"
 	],
 	"config" : {
 		"secure-http" : false
@@ -27,7 +27,8 @@
 		"php" : ">=7.3",
 		"vlucas/phpdotenv" : "^3.0.0",
 		"johnpbloch/wordpress" : "5.1.0",
-		"wpackagist-plugin/advanced-custom-fields" : "*"
+		"wpackagist-plugin/advanced-custom-fields" : "*",
+		"webtak/cleanup-wp": "*"
 	},
 	"extra" : {
 		"installer-paths" : {
@@ -42,5 +43,13 @@
 			]
 		},
 		"wordpress-install-dir" : "web/wp"
-	}
+	},
+  "scripts": {
+      "post-update-cmd": [
+          "Webtak\\CleanupWP\\Test::onPostInstallCmd"
+	]
+          
+  },
+"minimum-stability" : "dev"
+	
 }
