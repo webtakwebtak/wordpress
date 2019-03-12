@@ -1,9 +1,9 @@
 {
-	"name" : "webtakwebtak/wordpress",
+	"name" : "webtak/wordpress",
 	"type" : "project",
 	"license" : "MIT",
 	"description" : "WordPress boilerplate ",
-	"homepage" : "https://webtak.nl",
+	"homepage" : "https://www.webtak.nl",
 	"authors" : [{
 			"name" : "Hans Kellerhuis",
 			"email" : "webtak@gmail.com",
