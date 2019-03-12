@@ -50,19 +50,32 @@ define( 'NONCE_SALT',       $_ENV['NONCE_SALT'] );
  */
 $table_prefix = $_ENV['DB_PREFIX'];
 
+
 /**
- * For developers: WordPress debugging mode.
- *
- * Change this to true to enable the display of notices during development.
- * It is strongly recommended that plugin and theme developers use WP_DEBUG
- * in their development environments.
- *
- * For information on other constants that can be used for debugging,
- * visit the Codex.
- *
- * @link https://codex.wordpress.org/Debugging_in_WordPress
+ * Debugging Settings
  */
 define( 'WP_DEBUG', false );
+define('WP_DEBUG_DISPLAY', false);
+define('SCRIPT_DEBUG', false);
+ini_set('display_errors', 0);
+
+/**
+ * Custom settings
+ *
+ */
+define('AUTOMATIC_UPDATER_DISABLED', true);
+define('DISABLE_WP_CRON', true);
+define('DISALLOW_FILE_EDIT', true);
+define('DISALLOW_FILE_MODS', true);
+
+/**
+ * Custom folders
+ *
+ */
+define( 'WP_SITEURL',       $_ENV['WP_SITEURL'] );
+define( 'WP_HOME',          $_ENV['WP_HOME'] );
+define( 'WP_CONTENT_DIR',  dirname(ABSPATH).'\app' );
+define( 'WP_CONTENT_URL',  $_ENV['WP_HOME'] .'/app' );
 
 /**
  * Additional application variables
@@ -80,12 +93,9 @@ switch ($_ENV['WP_ENV']) {
         break;
 }
 
-
-/* That's all, stop editing! Happy publishing. */
-
 /** Absolute path to the WordPress directory. */
 if ( ! defined( 'ABSPATH' ) ) {
-	define( 'ABSPATH', dirname( __FILE__ ) . '/' );
+    define( 'ABSPATH', dirname( __FILE__ ) . '/' );
 }
 
 /** Sets up WordPress vars and included files. */
