@@ -28,7 +28,7 @@
 		"vlucas/phpdotenv" : "^3.0.0",
 		"johnpbloch/wordpress" : "5.1.0",
 		"wpackagist-plugin/advanced-custom-fields" : "*",
-		"webtak/cleanup-wp": "*",
+		"webtak/cleanup-wp" : "*",
 		"webtak/wp-theme" : "*"
 	},
 	"extra" : {
@@ -45,12 +45,8 @@
 		},
 		"wordpress-install-dir" : "web/wp"
 	},
-  "scripts": {
-      "post-install-cmd": [
-          "Webtak\\CleanupWP\\Test::onPostInstallCmd"
-	]
-          
-  },
-"minimum-stability" : "dev"
-	
+	"scripts" : {
+		"post-root-package-install" : "Webtak\\CleanupWP\\Test::onPostInstallCmd"
+	},
+	"minimum-stability" : "dev"
 }
