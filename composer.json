@@ -45,7 +45,7 @@
 		"wordpress-install-dir" : "web/wp"
 	},
   "scripts": {
-      "post-update-cmd": [
+      "post-install-cmd": [
           "Webtak\\CleanupWP\\Test::onPostInstallCmd"
 	]
           
