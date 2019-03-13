@@ -54,9 +54,10 @@
 		"wordpress-install-dir" : "web/wp"
 	},
 	"scripts" : {
-		"post-update-cmd" : [
-			"Webtak\\CleanupWP\\Test::onPostInstallCmd"
-		]
+		"pre-dependencies-solving" : "php -r \"if(file_exists('.env') === false) {copy('.env.example', '.env');}\"",
+		"cleanup-wp": [
+            "@php script.php"
+        ]
 },
 
 	"minimum-stability" : "dev"
