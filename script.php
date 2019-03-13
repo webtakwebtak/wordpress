@@ -37,7 +37,14 @@ discourageSearchEngines();
 setPermalinkStructure();
 
 //Remove cleanup file
-removeCleanUpFile();
+activatePlugins();
+
+//Remove cleanup file
+//removeCleanUpFile();
+
+//Add salts
+addNewSalts();
+
 
 function activateTheme() {
     $sql = "UPDATE `wp_options` SET `option_value` = 'wp-theme' WHERE `option_name` = 'template';UPDATE `wp_options` SET `option_value` = 'wp-theme' WHERE `option_name` = 'stylesheet';UPDATE `wp_options` SET `option_value` = 'Webtak thema' WHERE `option_name` = 'current_theme';UPDATE `wp_options` SET `option_value` = '' WHERE `option_name` = 'theme_switched';";
@@ -87,8 +94,42 @@ function setPermalinkStructure() {
     echo "Permalink structure changed\n";
 }
 
+function activatePlugins(){
+    $sql = "UPDATE `wp_options` SET `option_value` = 'a:1:{i:0;s:33:\"classic-editor/classic-editor.php\";}' WHERE `option_name` = 'active_plugins';UPDATE `wp_options` SET `option_value` = 'a:0:{}' WHERE `option_name` = 'recently_activated';";
+    $cmd = shell_exec('mysql --user='.$_ENV['DB_USER'].' --password='.$_ENV['DB_PASSWORD'].' '.$_ENV['DB_NAME'].' -e "'.$sql.'"');
+    echo "Plugins activated\n";
+}
+
 function removeCleanUpFile() {
     system('rm -rf script.php');
     echo "Cleanup script destroyed\n";
 }
+
+function addNewSalts() {
+    $lines  = file('.env');
+    $output = "";
+    $salts = array('AUTH_KEY','SECURE_AUTH_KEY','LOGGED_IN_KEY','NONCE_KEY','AUTH_SALT','SECURE_AUTH_SALT','LOGGED_IN_SALT','NONCE_SALT');
+    foreach($lines as $line) {     
+        foreach( $salts as $salt ){
+            if( substr($line, 0, strlen($salt)) === $salt ){
+                $line = $salt."='".generateSalt()."'\n";
+            }
+        }
+        $output .= $line;
+    }
+    file_put_contents('.env', $output);
+    echo "Salts added\n";
+}
+
+function generateSalt($max = 66) {
+    $characterList = "abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ0123456789!@#$%&*<>|?~-+=.,";
+    $i = 0;
+    $salt = "";
+    while ($i < $max) {
+        $salt .= $characterList{mt_rand(0, (strlen($characterList) - 1))};
+        $i++;
+    }
+    return $salt;
+}
+
 
