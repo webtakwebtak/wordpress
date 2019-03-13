@@ -26,5 +26,11 @@ vendor/*
 .AppleDouble
 .LSOverride
 
+## Eclipse ###
+# General
+.buildpath
+.project
+.settings/*
+
 # User-specific stuff
 .idea
