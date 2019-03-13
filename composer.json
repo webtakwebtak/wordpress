@@ -54,7 +54,7 @@
 		"wordpress-install-dir" : "web/wp"
 	},
 	"scripts" : {
-		"pre-dependencies-solving" : "php -r \"if(file_exists('.env') === false) {copy('.env.example', '.env');}\"",
+		"pre-dependencies-solving" : "php -r \"if(file_exists('.env') === false) {copy('.env.sample', '.env');}\"",
 		"cleanup-wp": [
             "@php script.php"
         ]
