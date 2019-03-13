@@ -56,8 +56,7 @@
 	"scripts" : {
 		"post-update-cmd" : [
 			"Webtak\\CleanupWP\\Test::onPostInstallCmd"
-		],
-		"post-dependencies-solving" : "php -r \"copy('.env.sample', '.env');\""	
+		]
 },
 
 	"minimum-stability" : "dev"
