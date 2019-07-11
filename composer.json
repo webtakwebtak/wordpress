@@ -26,11 +26,11 @@
 			"type": "package",
 			"package": {
 			"name": "advanced-custom-fields/advanced-custom-fields-pro",
-			"version": "5.8.0",
+			"version": "5.7.12",
 			"type": "wordpress-plugin",
 			"dist": {
 			  "type": "zip",
-			  "url": "https://connect.advancedcustomfields.com/index.php?a=download&p=pro&k=b3JkZXJfaWQ9NTc1MTF8dHlwZT1kZXZlbG9wZXJ8ZGF0ZT0yMDE1LTA2LTA1IDA4OjAxOjQ2&t=5.8.0"
+			  "url": "https://connect.advancedcustomfields.com/index.php?a=download&p=pro&k=b3JkZXJfaWQ9NTc1MTF8dHlwZT1kZXZlbG9wZXJ8ZGF0ZT0yMDE1LTA2LTA1IDA4OjAxOjQ2&t=5.7.12"
 			}
         }
 	}
@@ -39,7 +39,7 @@
 		"php" : ">=7.3",
 		"vlucas/phpdotenv" : "^3.0.0",
 		"johnpbloch/wordpress" : "5.1.0",
-		"advanced-custom-fields/advanced-custom-fields-pro": "5.8.0",
+		"advanced-custom-fields/advanced-custom-fields-pro": "5.7.2",
 		"wpackagist-plugin/classic-editor" : "dev-master",
 		"webtak/wp-theme" : "*"
 	},
