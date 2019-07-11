@@ -1,0 +1,18 @@
+.sg-colors{
+	display:block;
+	width:100%;
+	li{
+		padding:0;
+		display:inline-block;
+		height:80px;
+		width:80px;
+		&.percentage{
+			height:auto;
+			text-align:center;
+		}
+	    @include show-colors("primary");
+	    @include show-colors("secondary");
+	    @include show-colors("tertiary");
+	   	@include show-colors("quaternary");
+	}
+}

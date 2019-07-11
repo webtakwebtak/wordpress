@@ -41,7 +41,6 @@
 		"johnpbloch/wordpress" : "5.1.0",
 		"advanced-custom-fields/advanced-custom-fields-pro": "5.7.12",
 		"wpackagist-plugin/classic-editor" : "dev-master",
-		"webtak/wp-theme" : "*"
 	},
 	"extra" : {
 		"installer-paths" : {
@@ -50,9 +49,6 @@
 			],
 			"web/app/plugins/{$name}/" : [
 				"type:wordpress-plugin"
-			],
-			"web/app/themes/{$name}/" : [
-				"type:wordpress-theme"
 			]
 		},
 		"wordpress-install-dir" : "web/wp"

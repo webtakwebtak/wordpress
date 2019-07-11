@@ -1,0 +1,39 @@
+{
+  "name": "wp-theme",
+  "version": "1.0.0",
+  "description": "Webtak theme",
+  "main": "webpack.config.js",
+  "directories": {
+    "lib": "lib"
+  },
+  "scripts": {
+    "dev": "webpack --mode development",
+    "prod": "webpack --mode production"
+  },
+  "author": "Hans Kellerhuis",
+  "license": "ISC",
+  "devDependencies": {
+    "@fortawesome/fontawesome-free": "^5.7.2",
+    "@fortawesome/fontawesome-svg-core": "^1.2.15",
+    "@fortawesome/free-brands-svg-icons": "^5.7.2",
+    "@fortawesome/free-regular-svg-icons": "^5.7.2",
+    "@fortawesome/free-solid-svg-icons": "^5.7.2",
+    "css-loader": "^2.1.1",
+    "node-sass": "^4.11.0",
+    "sass": "*",
+    "sass-loader": "*",
+    "style-loader": "^0.23.1",
+    "webpack": "^4.29.6",
+    "webpack-cli": "^3.2.3"
+  },
+  "dependencies": {
+    "@fortawesome/fontawesome-free-brands": "^5.0.13",
+    "bootstrap": "^4.3.1",
+    "copy-webpack-plugin": "^5.0.1",
+    "file-loader": "^3.0.1",
+    "jquery": "^3.3.1",
+    "popper.js": "^1.14.7",
+    "slick-carousel": "^1.8.1",
+    "url-loader": "^1.1.2"
+  }
+}
