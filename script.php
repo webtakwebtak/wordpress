@@ -83,7 +83,7 @@ function emptyWriteSettings() {
 
 
 function discourageSearchEngines() {
-    $sql = "UPDATE `wp_options` SET `option_value` = '1' WHERE `option_name` = 'blog_public';";
+    $sql = "UPDATE `wp_options` SET `option_value` = '0' WHERE `option_name` = 'blog_public';";
     $cmd = shell_exec('mysql --user='.$_ENV['DB_USER'].' --password='.$_ENV['DB_PASSWORD'].' '.$_ENV['DB_NAME'].' -e "'.$sql.'"');
     echo "Search engines discouragd \n";
 }
