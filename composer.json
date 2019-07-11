@@ -39,7 +39,7 @@
 		"php" : ">=7.3",
 		"vlucas/phpdotenv" : "^3.0.0",
 		"johnpbloch/wordpress" : "5.1.0",
-		"advanced-custom-fields/advanced-custom-fields-pro": "5.7.2",
+		"advanced-custom-fields/advanced-custom-fields-pro": "5.7.12",
 		"wpackagist-plugin/classic-editor" : "dev-master",
 		"webtak/wp-theme" : "*"
 	},
