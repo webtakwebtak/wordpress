@@ -22,12 +22,18 @@
 			"type" : "composer",
 			"url" : "http://wpackagist.org"
 		},
-		{
-			"type" : "package",
-			"package" : {
-				"name" : "wpackagist-plugin/advanced-custom-fields",
-				"version" : "4.4.11",
-				"type" : "wordpress-plugin"
+		"type" : "package",
+		"package" : {
+			"name" : "advanced-custom-fields/advanced-custom-fields-pro",
+			"version" : "5.7.8",
+			"type" : "wordpress-plugin",
+			"dist" : {
+				"type" : "zip",
+				"url" : "https://connect.advancedcustomfields.com/index.php?p=pro&a=download"
+			},
+			"require" : {
+				"philippbaschke/acf-pro-installer" : "^1.0",
+				"composer/installers" : "^1.0"
 			}
 		}
 	],
@@ -35,7 +41,7 @@
 		"php" : ">=7.3",
 		"vlucas/phpdotenv" : "^3.0.0",
 		"johnpbloch/wordpress" : "5.1.0",
-		"wpackagist-plugin/advanced-custom-fields" : "*",
+		"advanced-custom-fields/advanced-custom-fields-pro" : "*",
 		"wpackagist-plugin/classic-editor" : "dev-master",
 		"webtak/wp-theme" : "*"
 	},
