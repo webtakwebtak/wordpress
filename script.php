@@ -95,7 +95,8 @@ function setPermalinkStructure() {
 }
 
 function activatePlugins(){
-    $sql = "UPDATE `wp_options` SET `option_value` = 'a:1:{i:0;s:33:\"classic-editor/classic-editor.php\";}' WHERE `option_name` = 'active_plugins';UPDATE `wp_options` SET `option_value` = 'a:0:{}' WHERE `option_name` = 'recently_activated';";
+    $statement = 'a:2:{i:0;s:34:"advanced-custom-fields-pro/acf.php";i:1;s:33:"classic-editor/classic-editor.php";}';
+    $sql = "UPDATE `wp_options` SET `option_value` = '".addslashes($statement)."' WHERE `option_name` = 'active_plugins';";
     $cmd = shell_exec('mysql --user='.$_ENV['DB_USER'].' --password='.$_ENV['DB_PASSWORD'].' '.$_ENV['DB_NAME'].' -e "'.$sql.'"');
     echo "Plugins activated\n";
 }
