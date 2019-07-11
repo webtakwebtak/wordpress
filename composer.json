@@ -20,18 +20,6 @@
 	"repositories" : [{
 			"type" : "composer",
 			"url" : "https://wpackagist.org"
-		}, {
-			"type" : "package",
-			"package" : {
-				"name" : "haboesbv/mu-plugin-security",
-				"version" : "0.1",
-				"type" : "wordpress-muplugin",
-				"source" : {
-					"type" : "git",
-					"url" : "git@bitbucket.org:haboesbv/mu-plugin-security.git",
-					"reference" : "master"
-				}
-			}
 		},  
 		{
 			"type" : "package",
