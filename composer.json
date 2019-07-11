@@ -1,26 +1,27 @@
 {
-	"name": "webtak/wordpress",
-	"type": "project",
-	"license": "MIT",
-	"description": "WordPress boilerplate ",
-	"homepage": "https://www.webtak.nl",
-	"authors": [{
-		"name": "Hans Kellerhuis",
-		"email": "webtak@gmail.com",
-		"homepage": "https://github.com/webtakwebtak"
-	}],
-	"keywords": [
+	"name" : "webtak/wordpress",
+	"type" : "project",
+	"license" : "MIT",
+	"description" : "WordPress boilerplate ",
+	"homepage" : "https://www.webtak.nl",
+	"authors" : [{
+			"name" : "Hans Kellerhuis",
+			"email" : "webtak@gmail.com",
+			"homepage" : "https://github.com/webtakwebtak"
+		}
+	],
+	"keywords" : [
 		"composer",
 		"wordpress",
 		"webtak"
 	],
-	"config": {
-		"secure-http": false
+	"config" : {
+		"secure-http" : false
 	},
 	"repositories" : [{
 			"type" : "composer",
-			"url" : "https://wpackagist.org"
-		},  
+			"url" : "http://wpackagist.org"
+		},
 		{
 			"type" : "package",
 			"package" : {
@@ -38,34 +39,34 @@
 			}
 		}
 	],
-	"require": {
-		"php": ">=7.3",
-		"vlucas/phpdotenv": "^3.0.0",
-		"johnpbloch/wordpress": "5.1.0",
-		"advanced-custom-fields/advanced-custom-fields-pro" : "*",
-		"wpackagist-plugin/classic-editor": "dev-master",
-		"webtak/wp-theme": "*"
+	"require" : {
+		"php" : ">=7.3",
+		"vlucas/phpdotenv" : "^3.0.0",
+		"johnpbloch/wordpress" : "5.1.0",
+		"wpackagist-plugin/advanced-custom-fields" : "*",
+		"wpackagist-plugin/classic-editor" : "dev-master",
+		"webtak/wp-theme" : "*"
 	},
-	"extra": {
-		"installer-paths": {
-			"web/app/mu-plugins/{$name}/": [
+	"extra" : {
+		"installer-paths" : {
+			"web/app/mu-plugins/{$name}/" : [
 				"type:wordpress-muplugin"
 			],
-			"web/app/plugins/{$name}/": [
+			"web/app/plugins/{$name}/" : [
 				"type:wordpress-plugin"
 			],
-			"web/app/themes/{$name}/": [
+			"web/app/themes/{$name}/" : [
 				"type:wordpress-theme"
 			]
 		},
-		"wordpress-install-dir": "web/wp"
+		"wordpress-install-dir" : "web/wp"
 	},
-	"scripts": {
-		"pre-dependencies-solving": "php -r \"if(file_exists('.env') === false) {copy('.env.sample', '.env');}\"",
+	"scripts" : {
+		"pre-dependencies-solving" : "php -r \"if(file_exists('.env') === false) {copy('.env.sample', '.env');}\"",
 		"cleanup-wp": [
-			"@php script.php"
-		]
-	},
+            "@php script.php"
+        ]
+},
 
-	"minimum-stability": "dev"
+	"minimum-stability" : "dev"
 }
