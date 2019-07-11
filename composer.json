@@ -40,7 +40,7 @@
 		"vlucas/phpdotenv" : "^3.0.0",
 		"johnpbloch/wordpress" : "5.1.0",
 		"advanced-custom-fields/advanced-custom-fields-pro": "5.7.12",
-		"wpackagist-plugin/classic-editor" : "dev-master",
+		"wpackagist-plugin/classic-editor" : "dev-master"
 	},
 	"extra" : {
 		"installer-paths" : {
