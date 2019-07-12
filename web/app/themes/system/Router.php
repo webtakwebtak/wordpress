@@ -19,7 +19,7 @@ class Router
         $request = $this->matchRoutes($uri,$routes);
         
         //initate class
-        $classname = '\\Controllers\\'.$request['controller'];
+        $classname = '\\controllers\\'.$request['controller'];
         $class = new $classname;
      
         //call method
