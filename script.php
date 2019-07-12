@@ -47,7 +47,7 @@ addNewSalts();
 
 
 function activateTheme() {
-    $sql = "UPDATE `wp_options` SET `option_value` = 'wp-theme' WHERE `option_name` = 'template';UPDATE `wp_options` SET `option_value` = 'wp-theme' WHERE `option_name` = 'stylesheet';UPDATE `wp_options` SET `option_value` = 'Webtak thema' WHERE `option_name` = 'current_theme';UPDATE `wp_options` SET `option_value` = '' WHERE `option_name` = 'theme_switched';";
+    $sql = "UPDATE wp_options SET option_value = 'wp-theme' WHERE option_name = 'template';UPDATE wp_options SET option_value = 'wp-theme' WHERE option_name = 'stylesheet';UPDATE wp_options SET option_value = 'Webtak thema' WHERE option_name = 'current_theme';UPDATE wp_options SET option_value = '' WHERE option_name = 'theme_switched';";
     executeSQL($sql);
     echo "Custom theme activated\n";
 }
