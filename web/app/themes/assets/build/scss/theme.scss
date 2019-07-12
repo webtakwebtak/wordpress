@@ -1,0 +1,23 @@
+//fontawsome
+$fa-font-path: "~@fortawesome/fontawesome-free/webfonts";
+@import "~@fortawesome/fontawesome-free/scss/brands";
+
+//mixins
+@import "components/_mixins.scss";
+
+//overide bootstrap variables
+@import "_custom.scss";
+
+//bootstrap
+@import "~bootstrap/scss/bootstrap";
+
+//app
+@import "components/_common.scss";
+@import "components/_typography.scss";
+@import "components/_styleguide.scss";
+@import "components/_header.scss";
+@import "components/_footer.scss";
+
+@import "components/_slick.scss";
+@import "~slick-carousel/slick/slick";
+@import "~slick-carousel/slick/slick-theme";

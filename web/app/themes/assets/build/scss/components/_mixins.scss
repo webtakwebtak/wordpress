@@ -1,0 +1,77 @@
+@mixin add-shade-colors($base-color-name) {   
+	$color: map-get($theme-colors,$base-color-name);
+	.#{$base-color-name}-0 {
+	  color:darken($color, 40%);
+	}
+	
+	.#{$base-color-name}-1 {
+	  color:darken($color, 30%);
+	}
+	
+	.#{$base-color-name}-2 {
+	  color:darken($color, 20%);
+	}
+	
+	.#{$base-color-name}-3 {
+	  color:darken($color, 10%);
+	}
+	
+	.#{$base-color-name}-4 {
+	  color:$color;
+	}
+	
+	.#{$base-color-name}-5 {
+	  	color:lighten($color, 10%);
+	 } 
+	 
+	 .#{$base-color-name}-5 {
+	  	color:lighten($color, 20%);
+	 } 
+	 
+	 .#{$base-color-name}-5 {
+	  	color:lighten($color, 30%);
+	 } 
+	 
+	 .#{$base-color-name}-5 {
+	  	color:lighten($color, 40%);
+	 } 
+}
+
+
+@mixin show-colors($base-color-name) {   
+	  &.#{$base-color-name}-back-0 {
+	  	background-color:darken(theme-color($base-color-name), 40%);
+	  } 
+	  
+	   &.#{$base-color-name}-back-1 {
+	  	background-color:darken(theme-color($base-color-name), 30%);
+	  } 
+	  
+	   &.#{$base-color-name}-back-2 {
+	  	background-color:darken(theme-color($base-color-name), 20%);
+	  } 
+	  
+	   &.#{$base-color-name}-back-3 {
+	  	background-color:darken(theme-color($base-color-name), 10%);
+	  } 
+	  
+	   &.#{$base-color-name}-back-4 {
+	  	background-color:theme-color($base-color-name);
+	  } 
+	  
+	   &.#{$base-color-name}-back-5 {
+	  	background-color:lighten(theme-color($base-color-name), 10%);
+	  } 
+	  
+	   &.#{$base-color-name}-back-6 {
+	  	background-color:lighten(theme-color($base-color-name), 20%);
+	  } 
+	  
+	  &.#{$base-color-name}-back-7 {
+	  	background-color:lighten(theme-color($base-color-name), 30%);
+	  } 
+	  
+	  &.#{$base-color-name}-back-8 {
+	  	background-color:lighten(theme-color($base-color-name), 40%);
+	  } 
+}
