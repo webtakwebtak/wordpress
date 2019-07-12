@@ -74,7 +74,7 @@ define('DISALLOW_FILE_MODS', true);
  */
 define( 'WP_SITEURL',       $_ENV['WP_SITEURL'] );
 define( 'WP_HOME',          $_ENV['WP_HOME'] );
-define( 'WP_CONTENT_DIR',  dirname(ABSPATH).'\app' );
+define( 'WP_CONTENT_DIR',  dirname(ABSPATH).'/app' );
 define( 'WP_CONTENT_URL',  $_ENV['WP_HOME'] .'/app' );
 
 /**
