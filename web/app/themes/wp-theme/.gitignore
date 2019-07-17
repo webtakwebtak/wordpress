@@ -1,2 +1,9 @@
+cache/*
+!cache/.gitkeep
+cache/db/*
+!cache/db/.gitkeep
+cache/views/*
+!cache/views/.gitkeep
+
 node_modules/
 .idea
